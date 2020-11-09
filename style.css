@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Sen', sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: body;
+  animation-duration: 3s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./img/desert.jpg);
+}
+
+header {
+  display: flex;
+  color: white;
+  padding: 2% 10%;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-container {
+  flex: 1;
+  margin-bottom: 5px;
+}
+header nav {
+  flex: 1;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul,
+nav a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+header a {
+  padding: 5px 10px;
+  transition: ease 0.7s;
+}
+header a:hover {
+  border-radius: 10px;
+  background-color: black;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  animation-name: slidedown !important;
+  animation-duration: 3s;
+}
+.banner-text p {
+  opacity: 0.7;
+  line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 15px;
+  animation-name: slideleft !important;
+  animation-duration: 3s;
+}
+
+.banner-text a {
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: ease 0.7s;
+  animation-name: btn;
+  animation-duration: 5s;
+}
+
+.banner-text a:hover {
+  background-color: black;
+  border: 1px solid black;
+}
+i {
+  visibility: hidden;
+}
+@media only screen and (max-width: 670px) {
+  i {
+    visibility: visible;
+    font-size: 40px;
+  }
+  header nav {
+    display: none;
+  }
+
+  header a {
+    margin-right: 5px;
+  }
+  .banner-text h1 {
+    font-size: 30px;
+  }
+  .banner-text p,
+  .banner-text a {
+    font-size: 15px;
+  }
+  .banner-text a {
+    padding: 5px 10px;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes body {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
